@@ -10700,3 +10700,34 @@ pickle: {'deps_info': {'pip': '23.3.1', 'setuptools': '68.2.2', 'pycaret': '3.3.
 2024-03-03 22:07:26,334:WARNING:C:\Python\python310\lib\site-packages\pandas\core\arrays\base.py:513: RuntimeWarning: invalid value encountered in cast
   result = np.asarray(self, dtype=dtype)
 
+2024-03-03 23:03:08,222:INFO:Initializing load_model()
+2024-03-03 23:03:08,223:INFO:load_model(model_name=excel_neuralnet_modell, platform=None, authentication=None, verbose=True)
+2024-03-03 23:03:08,314:INFO:Initializing predict_model()
+2024-03-03 23:03:08,315:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000022A016F1FD0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('iterative_imputer',
+                 TransformerWrapper(transformer=IterativeImputer(cat_estimator=LGBMClassifier(n_jobs=-1,
+                                                                                              random_state=555),
+                                                                 cat_estimator_prepare_for_categoricals_type='fit_params_categorical_feature',
+                                                                 categorical_indices=[0,
+                                                                                      1,
+                                                                                      2,
+                                                                                      3],
+                                                                 max_iter=5,
+                                                                 num_estimator=LGBMRegressor(n_jobs=-1,
+                                                                                             random_state=555),
+                                                                 num_e...
+                ('rest_encoding',
+                 TransformerWrapper(include=['date'],
+                                    transformer=TargetEncoder(cols=['date'],
+                                                              handle_missing='return_nan'))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=555))),
+                ('normalize', TransformerWrapper(transformer=StandardScaler())),
+                ('trained_model',
+                 <catboost.core.CatBoostRegressor object at 0x0000022A01725390>)]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000022A016E6660>)
+2024-03-03 23:03:08,315:INFO:Checking exceptions
+2024-03-03 23:03:08,315:INFO:Preloading libraries
+2024-03-03 23:03:08,316:INFO:Set up data.
+2024-03-03 23:03:08,324:INFO:Set up index.
+2024-03-03 23:03:08,338:WARNING:invalid value encountered in cast
+
